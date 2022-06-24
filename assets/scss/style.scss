@@ -1,0 +1,99 @@
+*{
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+}
+ul,
+li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+body{
+    outline: 1px solid red;
+    margin: auto;
+    padding: 0;
+    font: 15px Helvetica,Arial,sans-serif;
+    max-width: 1920px;
+    min-width: 360px;
+    color: #7a7a7a;
+}
+
+@mixin button {
+    font-size: 20px;
+    line-height: 32px;
+    color: #fff;
+    padding: 5px 10px 5px 40px;
+    position: relative;
+    letter-spacing: 3px;
+    border: 2px solid red;
+    animation-name: button;
+    animation-duration: 2s;
+    animation-delay: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    &::before {
+        content: url(../img/telephone-fill.svg);
+        left: 15px;
+        position: absolute;
+
+    }
+    &:hover {
+        color: rgb(196, 195, 195);
+        animation-duration: 0s;
+    }
+    &:hover::before {
+        content: url(../img/telephone-fill-red.svg);
+        left: 15px;
+        position: absolute;
+
+    }
+}
+
+.header {
+    background-color: #212121;
+    padding: 15px 0;
+}
+.container--flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header__logo {
+    width: 200px;
+    height: 77px;
+
+}
+.button {
+    @include button();
+}
+@keyframes button {
+    0% {
+        border: 2px solid red;
+        border-radius: 3px;
+    }
+    100% {
+        border: 2px solid #fff;
+        border-radius: 3px;
+    }
+    
+}
+
+
+@media (max-width: 576px) {
+    .container--flex{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .header__logo {
+        width: 120px;
+        height: 48px;
+    }
+}

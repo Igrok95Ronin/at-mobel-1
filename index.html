@@ -12,6 +12,7 @@ $title = $text . ' ' . $city;
 
 <!DOCTYPE html>
 <html lang="at">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,64 +21,52 @@ $title = $text . ' ' . $city;
     <?= $site_data['html'] ?>
     <title><?= $title ?></title>
 </head>
+
 <body>
 
-        <!--Шапка сайта-->
-        <header>
+    <!--Шапка сайта-->
+    <header class="header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col container container--flex">
+                    <img class="header__logo" src="assets/img/a01dd824b83df9d5143546e1be361501.png" alt="" >
+                    <a href="#" class="button">111222333</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- Раздел страницы-->
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col">...</div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!--Нижний колонтитул страницы-->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col">...</div>
+            </div>
+        </div>
+        <!-- Навигационные ссылки -->
+        <nav>
             <div class="container">
                 <div class="row">
-                    <div class="col">111<div>                 
-                </div>            
+                    <div class="col">...</div>
+                </div>
             </div>
-            <!-- Навигационные ссылки -->
-            <nav>
-                <div class="container">
-                    <div class="row">
-                        <div class="col">...</div>                 
-                    </div>            
-                </div>
-            </nav>
-        </header>
-
-        <!-- Основное содержимое страницы -->
-        <main>
-            <!-- Раздел страницы-->
-            <section>
-                <div class="container">
-                    <div class="row">
-                        <div class="col">...</div>                 
-                    </div>            
-                </div>
-                <!-- Определяет статью -->
-                <article>
-                    <div class="container">
-                        <div class="row">
-                            <div class="col">...</div>                 
-                        </div>            
-                    </div>
-                </article>
-            </section>
-        </main>
-
-        <!--Нижний колонтитул страницы-->
-        <footer>
-            <div class="container">
-                <div class="row">
-                    <div class="col">...</div>                 
-                </div>            
-            </div>
-            <!-- Навигационные ссылки -->
-            <nav>
-                <div class="container">
-                    <div class="row">
-                        <div class="col">...</div>                 
-                    </div>            
-                </div>
-            </nav>
-        </footer>
-        <!--Style-->     
-        <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-        <link href="assets/css/style.css" rel="stylesheet">
-        <script src="assets/css/bootstrap.bundle.min.js"></script>
+        </nav>
+    </footer>
+    <!--Style-->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
 </body>
+
 </html>
