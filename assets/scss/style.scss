@@ -65,6 +65,30 @@ $redColor: red;
 
     }
 }
+@mixin img {
+    max-width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    &:hover {
+        animation-name: wrapper__img;
+        animation-duration: 1s;
+        animation-direction: alternate;
+        animation-fill-mode: forwards;
+        @keyframes wrapper__img {
+            0% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+@mixin hoverText {
+    background-color: rgba(255, 0, 0, 0.08);
+    border-radius: 5px;
+    cursor: pointer;
+}
 
 .header {
     background-color: #212121;
@@ -216,35 +240,15 @@ $redColor: red;
     grid-template-columns: 1fr 1.4fr;
     gap: 30px;
 }
-.third-left-wrapper {
-}
 .third-left-wrapper__img {
-    max-width: 100%;
-    border-radius: 5px;
-    cursor: pointer;
-    &:hover {
-        animation-name: wrapper__img;
-        animation-duration: 1s;
-        animation-direction: alternate;
-        animation-fill-mode: forwards;
-        @keyframes wrapper__img {
-            0% {
-                transform: scale(1);
-            }
-            100% {
-                transform: scale(1.1);
-            }
-        }
-    }
+    @include img();
 }
 .third-right-inner {
     margin-bottom: 25px;
     padding: 5px;
     transition: all .3s;
     &:hover {
-        background-color: rgba(255, 0, 0, 0.08);
-        border-radius: 5px;
-        cursor: pointer;
+        @include hoverText();
     }
 }
 .third-right-inner:last-child {
@@ -257,6 +261,32 @@ $redColor: red;
 .third-right-inner__text {
     font-size: 17px;
 }
+//fourth section
+.fourth-section {
+}
+.fourth-box {
+    display: grid;
+    grid-template-columns:  1.4fr 1fr;
+    gap: 30px
+}
+.fourth-left-block {
+    order: 1;
+}
+.fourth-left-block__img {
+    @include img();
+}
+.fourth-right-block {
+}
+.fourth-right-block__title {
+    font-size: 31px;
+}
+.fourth-right-block__text {
+    font-size: 17px;
+    line-height: 29px;
+    &:hover {
+        @include hoverText();
+    }
+}
 
 
 
@@ -264,6 +294,20 @@ $redColor: red;
 @media (max-width: 768px) {
     .third-box {
         grid-template-columns: 1fr;
+    }
+    .fourth-box {
+        grid-template-columns: 1fr;
+    }
+    .fourth-left-block {
+        order: 0;
+    }
+    .fourth-right-block__title {
+        font-size: 20px;
+        font-weight: 600;
+    }
+    .fourth-right-block__text {
+        font-size: 15px;
+        line-height: 25px;
     }
 }
 @media (max-width: 576px) {
