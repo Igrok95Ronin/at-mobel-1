@@ -26,6 +26,8 @@ body{
     color: #7a7a7a;
 }
 
+$redColor: red;
+
 @mixin button {
     font-size: 20px;
     line-height: 32px;
@@ -33,6 +35,7 @@ body{
     padding: 5px 10px 5px 40px;
     position: relative;
     letter-spacing: 3px;
+    transition: 1.3s;
     border: 2px solid red;
     animation-name: button;
     animation-duration: 2s;
@@ -48,6 +51,7 @@ body{
     &:hover {
         color: rgb(196, 195, 195);
         animation-duration: 0s;
+        transition: .3s;
     }
     &:hover::before {
         content: url(../img/telephone-fill-red.svg);
@@ -80,7 +84,7 @@ body{
         border-radius: 3px;
     }
     100% {
-        border: 2px solid #fff;
+        border: 2px solid rgb(255, 255, 255);
         border-radius: 3px;
     }
     
@@ -141,6 +145,59 @@ body{
 .firs-bottom-inner__description {
     font-size: 17px;
     color: #fff;
+}
+//Second section
+.second-section {
+    text-align: center;
+}
+.second-box {
+
+}
+.second__title {
+    color: #2F2F2F;
+    font-size: clamp(22px,3vw,25px);
+    font-weight: 500;
+}
+.second__title-2 {
+    color: $redColor;
+    font-weight: 600;
+    line-height: 50px;
+}
+.second__text {
+    font-size: 16px;
+    line-height: 25px;
+    margin-bottom: 40px;
+}
+.second-button {
+    @include button();
+    animation-name: button2;
+    animation-duration: 2s;
+    animation-delay: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    color: $redColor;
+    &::before {
+        content: url(../img/telephone-fill-red.svg);
+        left: 15px;
+        position: absolute;
+
+    }
+    &:hover {
+        color: #000;
+        animation-duration: 0s;
+        transition: .3s;
+    }
+    @keyframes button2 {
+        0% {
+            border: 2px solid red;
+            border-radius: 3px;
+        }
+        100% {
+            border: 2px solid rgba(255, 0, 0, 0.165);
+            border-radius: 3px;
+        }
+        
+    }
 }
 
 
