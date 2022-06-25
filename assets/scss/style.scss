@@ -28,6 +28,11 @@ body{
 
 $redColor: red;
 
+@mixin title {
+    font-size: clamp(24px,3vw,36px);
+    text-align: center;
+    margin: 3rem 0;
+}
 @mixin button {
     font-size: 20px;
     line-height: 32px;
@@ -199,12 +204,67 @@ $redColor: red;
         
     }
 }
+//Third section
+.third-section {
+    background-color: #eaeaea
+}
+.third__title {
+    @include title();
+}
+.third-box {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 30px;
+}
+.third-left-wrapper {
+}
+.third-left-wrapper__img {
+    max-width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    &:hover {
+        animation-name: wrapper__img;
+        animation-duration: 1s;
+        animation-direction: alternate;
+        animation-fill-mode: forwards;
+        @keyframes wrapper__img {
+            0% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+.third-right-inner {
+    margin-bottom: 25px;
+    padding: 5px;
+    transition: all .3s;
+    &:hover {
+        background-color: rgba(255, 0, 0, 0.08);
+        border-radius: 5px;
+        cursor: pointer;
+    }
+}
+.third-right-inner:last-child {
+    margin-bottom: 10px;
+}
+.third-right-inner__name {
+    font-size: 20px;
+    font-weight: 600;
+}
+.third-right-inner__text {
+    font-size: 17px;
+}
 
 
 
 
 @media (max-width: 768px) {
-    
+    .third-box {
+        grid-template-columns: 1fr;
+    }
 }
 @media (max-width: 576px) {
     .container--flex{
