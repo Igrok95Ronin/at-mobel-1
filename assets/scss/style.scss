@@ -344,9 +344,37 @@ $redColor: red;
 }
 .sixth-item {
     background-color: #fff;
+    border: 3px solid rgba(255, 0, 0, 0);
+    border-radius: 5px;
+    transition: .6s;
     padding: 20px;
     display: flex;
     gap: 20px;
+    &:nth-child(1):hover {
+        border: 3px solid red;
+    }
+    &:nth-child(2):hover {
+        border: 3px solid blue;
+    }
+    &:nth-child(3):hover {
+        border: 3px solid green;
+    }
+    &:nth-child(4):hover {
+        border: 3px solid black;
+    }
+    &:nth-child(5):hover {
+        border: 3px solid orange;
+    }
+    &:nth-child(6):hover {
+        border: 3px solid orchid;
+    }
+    &:nth-child(7):hover {
+        border: 3px solid brown;
+    }
+    &:nth-child(8):hover {
+        border: 3px solid rebeccapurple;
+    }
+    
 }
 .sixth-item__img {
     max-width: 200px;
@@ -366,6 +394,59 @@ $redColor: red;
 .sixth-item__text {
     font-size: 15px;
     line-height: 25px;
+}
+//Seventh section
+.seventh-section {
+}
+.seventh-title {
+    @include title();
+}
+.seventh-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+.seventh-items {
+    padding: 10px;
+    border: 3px solid cadetblue;
+    border-radius: 5px;
+    transition: .5s;
+    &:nth-child(1):hover {
+        border: 3px solid red;
+    }
+    &:nth-child(2):hover {
+        border: 3px solid blue;
+    }
+    &:nth-child(3):hover {
+        border: 3px solid green;
+    }
+    &:nth-child(4):hover {
+        border: 3px solid black;
+    }
+    &:nth-child(5):hover {
+        border: 3px solid orange;
+    }
+    &:nth-child(6):hover {
+        border: 3px solid orchid;
+    }
+}
+.seventh-items__title {
+    font-weight: bold;
+    font-size: 16px;
+    white-space: nowrap;
+    color: #000000;
+    margin-bottom: 2px;
+}
+.seventh-items__date {
+    color: #000000;
+    opacity: 0.5;
+    font-size: 12px;
+}
+.seventh-items__img {
+    padding: 10px 0;
+}
+.seventh-items__message {
+    line-height: 20px;
 }
 
 
@@ -396,6 +477,11 @@ $redColor: red;
     .fourth-right-block__text {
         font-size: 15px;
         line-height: 25px;
+    }
+    .seventh-box {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
     }
 }
 @media (max-width: 576px) {
