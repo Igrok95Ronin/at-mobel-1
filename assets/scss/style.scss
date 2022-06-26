@@ -230,7 +230,7 @@ $redColor: red;
 }
 //Third section
 .third-section {
-    background-color: #eaeaea
+    background-color: #eaeaea;
 }
 .third__title {
     @include title();
@@ -287,10 +287,98 @@ $redColor: red;
         @include hoverText();
     }
 }
+//fifth section
+.fifth-section {
+    background-color: #eaeaea;
+}
+.fifth-title {
+    @include title();
+    margin-bottom: 10px;
+}
+.fifth-text {
+    text-align: center;
+}
+.fifth-box {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 15px;
+}
+.fifth-item {
+    background-color: #fff;
+    padding: 50px 10px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    gap: 10px;
+    transition: .5s;
+    &:hover {
+        @include hoverText();
+    }
+}
+.fifth-item__img {
+    margin-bottom: 30px;
+}
+.fifth-item__title {
+    color: #000000;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+.fifth-item__description {
+    font-size: 15px;
+    text-align: center;
+    line-height: 25px;
+}
+//Sixth section
+.sixth-section {
+    background-color: #eaeaea;
+}
+.sixth-title {
+    @include title();
+}
+.sixth-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+.sixth-item {
+    background-color: #fff;
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+}
+.sixth-item__img {
+    max-width: 200px;
+    height: 200px;
+}
+.sixth-item__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.sixth-item__title {
+    color: rgb(0, 0, 0);
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+.sixth-item__text {
+    font-size: 15px;
+    line-height: 25px;
+}
 
 
 
+@media (max-width: 992px) {
+    .fifth-box {
+        grid-template-columns: repeat(2,1fr);
+    }
+    .sixth-box {
+        grid-template-columns: 1fr;
 
+    }
+}
 @media (max-width: 768px) {
     .third-box {
         grid-template-columns: 1fr;
@@ -323,5 +411,19 @@ $redColor: red;
         color: #fff;
         font-size: 17px;
         line-height: 30px;
+    }
+    .fifth-box {
+        grid-template-columns: 1fr;
+    }
+    .sixth-item {
+        flex-direction: column;
+        align-items: center;
+    }
+    .sixth-item__title {
+        text-align: center;
+    }
+    .sixth-item__img {
+        max-width: 100%;
+        height: 100%;
     }
 }
