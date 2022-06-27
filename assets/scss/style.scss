@@ -69,7 +69,7 @@ $redColor: red;
     }
 }
 @mixin img {
-    max-width: 100%;
+    width: 100%;
     border-radius: 5px;
     cursor: pointer;
     &:hover {
@@ -120,6 +120,12 @@ $redColor: red;
         border-radius: 3px;
     }
     
+}
+.btn-size {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    border-radius: 0;
 }
 //First section
 .first-section {
@@ -499,6 +505,16 @@ $redColor: red;
 .ninth-section__img {
     max-width: calc(16% - 20px);
 }
+.footer {
+    background-color: #000;
+    height: 5vh;
+    color: #fff;
+    font-weight: 600;
+
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+}
 
 
 
@@ -546,6 +562,9 @@ $redColor: red;
     }
 }
 @media (max-width: 576px) {
+    .header__logo--display-none {
+        display: none;
+    }
     .container--flex{
         flex-direction: column;
         gap: 20px;
